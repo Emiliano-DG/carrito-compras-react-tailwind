@@ -1,4 +1,6 @@
 import { CartItem } from "./CartItem";
+import { CartTotal } from "./CartTotal";
+import { CartButton } from "./CartButton";
 
 export const Cart = () => {
   return (
@@ -7,10 +9,7 @@ export const Cart = () => {
       <CartItem />
       <CartItem />
       <CartItem />
-      <div className="flex justify-between items-center my-6">
-        <p className="text-sm">Order Total</p>
-        <p className="text-2xl font-bold">$46,5</p>
-      </div>
+      <CartTotal />
       <div className="bg-Blue-100 flex gap-1 p-2 mb-6">
         <img
           src="/assets/images/icon-carbon-neutral.svg"
@@ -20,9 +19,7 @@ export const Cart = () => {
           This is <span className="font-bold">carbon neutral</span> delivery
         </p>
       </div>
-      <button className="bg-Red text-Blue-50 p-2 rounded-full w-full hover:bg-red-900 transition-colors cursor-pointer">
-        Confirm Order
-      </button>
+      <CartButton text="Confirm Order" />
     </div>
   );
 };
