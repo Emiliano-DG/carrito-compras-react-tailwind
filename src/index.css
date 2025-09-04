@@ -11,17 +11,20 @@
 @theme {
   --color-Red: hsl(14, 86%, 42%);
   --color-Green: hsl(159, 69%, 38%);
-  --color-Blue-50: hsl(210, 100%, 98%);
+  --color-Coral: hsl(14, 90%, 60%);
+  --color-Coral-600: hsl(14, 80%, 45%); /* hover/borde */
+  --color-Gray-700: hsl(210, 10%, 40%); /* gris texto*/
+  /* --color-Blue-50: hsl(210, 100%, 98%); */
   --color-Blue-100: hsl(210, 100%, 94%);
   --color-Blue-300: hsl(210, 92%, 72%);
   --color-Blue-400: hsl(210, 85%, 60%);
   --color-Blue-500: hsl(210, 80%, 44%);
   --color-Blue-900: hsl(210, 60%, 12%);
-
+  --color-Gris: hsl(210, 20%, 98%);
   --breakpoint-desktop: 1024px;
 }
 
 body {
   font-family: RedHat;
-  background-color: var(--color-Blue-100);
+  background-color: var(--color-Gris);
 }

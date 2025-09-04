@@ -1,6 +1,6 @@
 import { CardContainer } from "./components/cardContainer";
-import { Cart } from "./components/Cart";
-import { CartConfirmation } from "./components/CartConfirmation";
+import { Cart } from "./components/cart/Cart";
+import { CartConfirmation } from "./components/cart/CartConfirmation";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           <Cart />
         </div>
       </section>
-      {/* <CartConfirmation /> */}
+      <CartConfirmation />
     </main>
   );
 }
