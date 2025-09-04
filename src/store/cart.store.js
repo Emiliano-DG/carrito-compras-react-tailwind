@@ -24,7 +24,7 @@ export const useCartStore = create((set, get) => ({
   updateItemCart: (updateItem) =>
     set((state) => ({
       cart: state.cart.map((item) =>
-        item.name === updateItem.name ? { ...updateItem } : item
+        item.name === updateItem.name ? { ...item, ...updateItem } : item
       ),
     })),
 

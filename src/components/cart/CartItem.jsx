@@ -10,7 +10,7 @@ export const CartItem = ({ name, price, quantity }) => {
           <div className="flex gap-2">
             <p className="text-Red font-semibold">{quantity}x</p>
             <p className="text-gray-500">@${price.toFixed(2)}</p>
-            <p className="text-Blue-500 font-semibold">
+            <p className="text-Coral-600 font-semibold">
               {(quantity * price).toFixed(2)}
             </p>
           </div>

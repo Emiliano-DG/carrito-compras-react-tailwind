@@ -1,4 +1,5 @@
 import { useCartStore } from "../store/cart.store";
+import { AddToCartButton } from "./AddToCardButton";
 
 export const CardProducto = ({ image, name, category, price }) => {
   const { addItemToCard, updateItemCart, deleteItemCart, cart } =
@@ -58,38 +59,13 @@ export const CardProducto = ({ image, name, category, price }) => {
         />
       </picture>
 
-      {quantity == 0 ? (
-        // BOTON SELECCIONAR PRODUCTO
-        <button
-          onClick={addOne}
-          className="bg-Gris border-2 border-Coral  rounded-full w-40 flex justify-center p-3 gap-2 absolute inset-x-0 mx-auto top-[170px] cursor-pointer hover:border-Coral-600 transition-colors"
-        >
-          <img
-            src="assets/images/icon-add-to-cart.svg"
-            alt="icon-add-to-cart"
-          />
-          <span className="text-Gray-700">Add to Card</span>
-        </button>
-      ) : (
-        <div className="bg-Coral  rounded-full w-40 flex justify-between items-center p-3 gap-2 absolute inset-x-0 mx-auto top-[170px] cursor-pointer">
-          {/* BOTON DE DISMINUCION */}
-          <img
-            onClick={subtractOne}
-            className="border border-Gris size-[18px]  rounded-full p-1 hover:border-Coral-600"
-            src="assets/images/icon-decrement-quantity.svg"
-            alt="icon-decrement-quantity"
-          />
-          {/* CONTADOR */}
-          <p className="text-Gris">{quantity}</p>
-          {/* BOTON DE INCREMENTO */}
-          <img
-            onClick={addOne}
-            className="border border-Gris size-[18px] rounded-full p-1 hover:border-Coral-600"
-            src="./assets/images/icon-increment-quantity.svg"
-            alt="icon-increment-quantity"
-          />
-        </div>
-      )}
+      {/* BOTÓN */}
+      <AddToCartButton
+        quantity={quantity}
+        addOne={addOne}
+        subtractOne={subtractOne}
+      />
+
       {/* CATEGORIA,NOMBRE Y PRECIO DEL PRODUCTO */}
       <p className="text-Gray-700    text-sm">{category}</p>
       <h2 className="font-bold">{name}</h2>

@@ -7,7 +7,7 @@ export const Cart = () => {
   const { toggleClose, cart, totalQuantityCard } = useCartStore();
   return (
     <div className="bg-white p-6 rounded-xl shadow-xl border border-Blue-100">
-      <h2 className="text-Red font-bold text-xl mb-6">
+      <h2 className="text-Coral-600 font-bold text-xl mb-6">
         Your Cart ({totalQuantityCard()})
       </h2>
 
